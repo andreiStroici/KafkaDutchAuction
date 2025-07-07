@@ -1,13 +1,13 @@
 # KafkaDutchAuction
 ## Capition
 1. [Introduction](#introduction)
-2. [Dutch Auction]()
-3. [Techincal aspects]()
-    1. [Kafka]()
-    2. [Microservices]
-4. [Microservices]()
-5. [Activity diagram]()
-6. [Class Diagram]()
+2. [Dutch Auction](#dutch-auction)
+3. [Techincal aspects](#techincal-aspects)
+    1. [Kafka](#1-kafka)
+    2. [Microservices](#2-microservices)
+4. [Microservices](#microservices)
+5. [Activity diagram](#activity-diagram)
+6. [Class Diagram](#class-diagram)
 
 ## Introduction
 
@@ -15,9 +15,9 @@
 
 ## Techincal aspects
 
-### Kafka
+### 1. Kafka
 
-### Microservices
+### 2. Microservices
 
 ## Microservices
 
