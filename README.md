@@ -65,6 +65,53 @@ Messages in Kafka are organized into topics, which can be thought of as folders 
 
 ## Microservices
 
+In this section will be presented the microservices that we use.
+
+### 1. BidderMicroservice
+
+This microservice represents the bidder in the auction process. It receives offers from the auctioneer and responds by either accepting or rejecting them.
+
+---
+
+#### Responsibilities
+
+- **`receive_offer`**  
+  Receives data (the offer) from the auctioneer via Kafka.
+
+- **`accept_offer`**  
+  Sends a message to the auctioneer to notify that the bidder accepts the offer.
+
+- **`reject_offer`**  
+  Sends a message to the auctioneer to notify that the bidder rejects the offer.
+
+- **`wait_for_result`**  
+  Waits for the result of the auction and prints a message informing the bidder whether they won or lost.
+
+---
+
+#### Technologies Used
+
+- Kafka  
+- Python
+
+---
+
+#### Architecture Role
+
+Acts as the **bidder** in the auction process, reacting to offers and auction results asynchronously.
+
+---
+
+#### SOLID Principles Applied
+
+- **Single Responsibility Principle (SRP)**  
+  The microservice is responsible for a single business capability: bidding in an auction.
+
+- **Inversion of Control (IoC)**  
+  The microservice uses Kafka for communication with external components, decoupling its logic from direct service calls.
+
+
+
 ## Activity Diagram
 
 ## Class Diagram
