@@ -2,7 +2,7 @@
 ## Capition
 1. [Introduction](#introduction)
 2. [Dutch Auction](#dutch-auction)
-3. [Techincal aspects](#techincal-aspects)
+3. [Techincal aspects](#technical-aspects)
     1. [Kafka](#1-kafka)
     2. [Microservice architecture](#2-micorservices-archiecture)
 4. [Microservices](#microservices)
