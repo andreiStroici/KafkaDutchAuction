@@ -98,7 +98,7 @@ This microservice represents the bidder in the auction process. It receives offe
 
 #### Architecture Role
 
-Acts as the **bidder** in the auction process, reacting to offers and auction results asynchronously.
+Acts as the **bidder** in the auction process, reacting to offers and auction results.
 
 ---
 
@@ -107,9 +107,56 @@ Acts as the **bidder** in the auction process, reacting to offers and auction re
 - **Single Responsibility Principle (SRP)**  
   The microservice is responsible for a single business capability: bidding in an auction.
 
+- **Interface Segregation Principle**: The microservice exposes only the operations necessary for handling commands.
+
 - **Inversion of Control (IoC)**  
   The microservice uses Kafka for communication with external components, decoupling its logic from direct service calls.
 
+### 2. AuctioneerMicroservice
+
+This microservice represent the auctioneer in the auction process. It sends offer to the bidders and receive their response: accept or reject the offer.
+
+---
+
+#### Responsibilities
+
+- **`make an offer`**
+  
+  This responsibilities send an offer to the bidders. If the offer is rejected by all bidders than it sends another offer with a lower price than previous one.
+
+- **`receive response`**
+
+  This responsibilities receive the bidder's responses for the offer it sends.
+
+- **`finish auction`**
+
+  This responsibilities send a message to the MassageProcessor to notify it that the auction is over because a bidder accept last offer send.
+
+---
+
+#### Technologies Used
+
+- Kafka  
+- Python
+
+---
+
+#### Architecture Role
+
+Acts as the **auctioneer** in the auction process, sending offers and closing the auction procees when an offer is accepted.
+
+---
+
+#### SOLID Principles Applied
+
+- **Single Responsibility Principle (SRP)**  
+  The microservice is responsible for a single business capability: auctioneer capabilities: sending an offer, close the auction process.
+
+- **Interface Segregation Principle**  
+  The microservice exposes only the operations necessary for handling commands.
+
+- **Inversion of Control (IoC)**  
+  The microservice uses Kafka for communication with external components, decoupling its logic from direct service calls.
 
 
 ## Activity Diagram
