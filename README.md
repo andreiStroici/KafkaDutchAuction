@@ -158,6 +158,89 @@ Acts as the **auctioneer** in the auction process, sending offers and closing th
 - **Inversion of Control (IoC)**  
   The microservice uses Kafka for communication with external components, decoupling its logic from direct service calls.
 
+### 3. MessageProcessor
+
+This microservice is responsible for processing all the messages it receives: it sorts the messages by date.
+
+---
+
+#### Responsibilities
+
+- **`receive and process messages`**
+
+  This responsibility receives messages form bidders and auctioneer and sort the messages.
+
+- **`finish processing`**
+
+  This responsibility send a message to the bidder microservice to notify BiddingProcessorMicroservice that it has finished to processs the messages.
+
+---
+
+#### Technologies Used
+
+- Kafka  
+- Python
+
+---
+
+#### Architecture Role
+
+Acts as the **message processor** in the auction process, sorting the messages by date.
+
+---
+
+#### SOLID Principles Applied
+
+- **Single Responsibility Principle (SRP)**  
+  The microservice is responsible for a single business capability: process the messages and sort them by date.
+
+- **Interface Segregation Principle**  
+  The microservice exposes only the operations necessary for processing messages.
+
+- **Inversion of Control (IoC)**  
+  The microservice uses Kafka for communication with external components, decoupling its logic from direct service calls.
+ 
+### 4. BiddingProcessorMicroservice
+
+It decides who wins the auction based on the offers received from the MessageProcessorMicroservice. It announces the winner by sending the message of the winning bidder to the BidderMicroservice.
+
+---
+
+#### Responsibilities
+
+- **`receive processed Bidds`**
+  
+  This responsibility received processed bidds from MessageProcessor microservice.
+
+- **`decide AUction Winner`**
+
+  This responsibility decide the acution winner based on the processed bidds received from the MessageProcessor. The result is sent to the bidders.
+
+---
+
+#### Technologies Used
+
+- Kafka  
+- Python
+
+---
+
+#### Architecture Role
+
+Acts as the **biddig processor** in the auction process processing the offer and than send a message to the bidders to anouce the auction winner.
+
+---
+
+#### SOLID Principles Applied
+
+- **Single Responsibility Principle (SRP)**  
+  The microservice is responsible for a single business capability: process the bidds and decide the auction winner.
+
+- **Interface Segregation Principle**  
+  The microservice exposes only the operations necessary for processing messages.
+
+- **Inversion of Control (IoC)**  
+  The microservice uses Kafka for communication with external components, decoupling its logic from direct service calls.
 
 ## Activity Diagram
 
