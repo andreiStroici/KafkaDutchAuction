@@ -255,7 +255,7 @@ Acts as the **biddig processor** in the auction process processing the offer and
 **In this activity diagram, colors are used to distinguish the actions of each microservice:**
 
 - **$$\color{Green}Green$$** (Auctioneer Microservice)
-- **$$\color{blue}Blue$$** (Bidder Microservice)
+- **$$\color{lightblue}Blue$$** (Bidder Microservice)
 - **$$\color{red}Red$$** (MessageProcessor Microservice)
 - **$$\color{Orange}Orange$$** (BiddingProcessor Microservice)
 ---
