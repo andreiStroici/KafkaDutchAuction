@@ -246,7 +246,19 @@ Acts as the **biddig processor** in the auction process processing the offer and
 - **Inversion of Control (IoC)**  
   The microservice uses Kafka for communication with external components, decoupling its logic from direct service calls.
 
+---
+
 ## Activity Diagram
+
+![Activity Diagram](/Images/ActivityDiagram.png)
+
+**In this activity diagram, colors are used to distinguish the actions of each microservice:**
+
+- **Green** (Auctioneer Microservice)
+- **Blue** (Bidder Microservice)
+- **Red** (MessageProcessor Microservice)
+- **Orange** (BiddingProcessor Microservice)
+---
 
 ## Class Diagram
 
