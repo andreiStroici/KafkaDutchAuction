@@ -6,6 +6,10 @@
     1. [Kafka](#1-kafka)
     2. [Microservice architecture](#2-micorservices-archiecture)
 4. [Microservices](#microservices)
+    1. [BidderMicroservice](#1-biddermicroservice)
+    2. [AuctioneerMicroservice](#2-auctioneermicroservice)
+    3. [MessageProcessor](#3-messageprocessor)
+    4. [BiddingProcessorMicroservice](#4-biddingprocessormicroservice)
 5. [Activity diagram](#activity-diagram)
 6. [Class Diagram](#class-diagram)
 
