@@ -262,6 +262,8 @@ Acts as the **biddig processor** in the auction process processing the offer and
 
 ## Class Diagram
 
+![Class Diagram](/Images/ClassDiagram.png)
+
 ## Bibiliography
 
 - **Bidding rules** are taken from [here](https://corporatefinanceinstitute.com/resources/economics/english-auction/)
