@@ -246,6 +246,8 @@ Acts as the **biddig processor** in the auction process processing the offer and
 - **Inversion of Control (IoC)**  
   The microservice uses Kafka for communication with external components, decoupling its logic from direct service calls.
 
+![Microservice Diagram](/Images/MicroserviceDiagram.png)
+
 ---
 
 ## Activity Diagram
