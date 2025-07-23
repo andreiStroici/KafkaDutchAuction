@@ -108,12 +108,16 @@ Acts as the **bidder** in the auction process, reacting to offers and auction re
 
 #### SOLID Principles Applied
 
-- **Single Responsibility Principle (SRP)**  
+- **Single Responsibility Principle (SRP)**
+  
   The microservice is responsible for a single business capability: bidding in an auction.
 
-- **Interface Segregation Principle**: The microservice exposes only the operations necessary for handling commands.
+- **Interface Segregation Principle**:
 
-- **Inversion of Control (IoC)**  
+  The microservice exposes only the operations necessary for handling commands.
+
+- **Inversion of Control (IoC)**
+    
   The microservice uses Kafka for communication with external components, decoupling its logic from direct service calls.
 
 ### 2. AuctioneerMicroservice
